@@ -1,0 +1,1 @@
+![ ](/public/images/logo-mercado-liebre.svg)
