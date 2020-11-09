@@ -14,5 +14,11 @@ app.get('/', (req,res)=>{
 //     res.sendFile(__dirname + '/public/' + req.url)
 // })
  
+app.get('/newsletter', (req,res)=>{
+     
+    res.sendFile( __dirname + '/views/newsletter.html')
+
+})
+
 
 app.listen(3050)

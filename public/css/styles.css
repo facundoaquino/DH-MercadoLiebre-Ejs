@@ -1,0 +1,58 @@
+* {
+	/* background-color:blueviolet; */
+	font-family: 'Roboto', sans-serif;
+}
+
+/* claves para iconos:   money , card , siginin ,shopping,shipping,credit,gift,shield */
+
+.header {
+	background-color: #eac926;
+}
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+i {
+	color: #03264c;
+}
+
+.main__title {
+	background-color: #ebebeb;
+}
+
+.fa-truck {
+	color: #e28941;
+}
+
+.product__discount {
+	color: #e28941;
+}
+
+hr {
+	border: none;
+	height: 50px;
+	background-color: #ebebeb;
+}
+
+img {
+	width: 100%;
+}
+
+h4 {
+	color: #666;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 24px;
+	color: #666;
+}
+.footer {
+	font-size: 12px;
+	color: #666;
+}

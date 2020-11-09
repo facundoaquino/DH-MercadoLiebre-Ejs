@@ -1,0 +1,83 @@
+/* GENERALES */
+
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    
+   
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+   
+}
+
+/* HEADER */
+
+.header {
+    background-color: #fff159;
+    padding: 3rem;
+    
+}
+
+.header__img{
+    width: 200px;
+    margin-bottom: 3rem;
+}
+
+
+ .header__title{
+     margin: 0;
+     font-size: 48px;
+     color: #03264C;;
+ }
+
+
+/* MAIN */
+
+.main{
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.main__description{
+    color:#666;
+    font-size: 24px;
+}
+ 
+
+.main__h4{
+    color:#666;
+    font-size: 18px;
+}
+
+.main__h2{
+    color:#666;
+    font-size: 32px;
+}
+
+.main__listSocial > li > a , .main__direction{
+    color:#3684FA; 
+    font-size: 24px;
+    list-style: none;
+    font-weight: 700;
+}
+
+.main__direction{
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+.footer{
+    font-size: 16px;
+    color:#666; 
+    font-weight: 300;
+}
