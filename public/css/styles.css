@@ -14,6 +14,10 @@ body {
 
 .header {
 	background-color: #eac926;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	 
 }
 
 .header__logo {
@@ -21,12 +25,18 @@ body {
 }
 
 .header__search {
-	display: block;
+	 
 	width: 50%;
+	 
 }
 
 .header__nav {
 	display: none;
+}
+
+.header__description{
+	flex-basis: 100%;
+	text-align: center;
 }
 
 .header__btncontainer {
@@ -48,6 +58,24 @@ body {
 	background-color: #0022aa;
 	cursor: pointer;
 }
+
+.header__containerInput{
+	position:relative;
+	 
+
+}
+
+.searchIcon{
+	color: #353232;
+	opacity: .5;
+	font-size: 15px;
+	position: absolute;
+	right: 5px;
+	top: 3px;
+}
+
+
+
 
 .banner {
 	width: 100%;
@@ -124,8 +152,39 @@ body {
 
 /* registrer */
 
+
+
 .registrerMain{
 	margin: 20px;
+}
+
+.registrerMain__container{
+	display: flex;
+	 
+	margin: 20px 0;
+}
+
+.registrerMain__container--user{
+	margin-left: 20px;
+}
+
+input[type='radio']{
+	margin-right: 10px;
+	 
+}
+
+.userPreferences{
+	margin: 10px 0 10px 20px;
+
+	display: flex;
+	flex-direction: column
+}
+
+.userPreferences > div {
+	margin: 10px 0;
+}
+.userPreferences > div > label {
+	margin-left: 10px;
 }
 
 .registrer__clear{
@@ -164,18 +223,54 @@ i {
 	color: #03264c;
 }
 
+
+/* estilos main */
+
 .main__product {
-	padding: 15px;
+	 
 	background-color: white;
 	margin: 10px 20px;
+}
+
+.main__containerProduct{
+	display: flex;
+	flex-wrap: wrap;
+	border-top: 1px solid #ebebeb;
+	padding: 1rem;
+	position: relative;
 }
 
 .fa-truck {
 	color: #e28941;
 }
 
+.main__icon{
+	 
+	 
+	position: absolute;
+	top: 0;
+	right: 10px;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	border: 1px solid	  #ebebeb;
+	;
+	padding: 2px;
+	background-color: white;
+}
+.main__containerProduct > p{
+	padding: .5rem;
+}
+
+.main__containerProduct > h4{
+	width: 100%;
+	padding: .5rem;
+
+}
+
 .product__discount {
 	color: #e28941;
+	font-size: 15px;
+	vertical-align: middle;
 }
 
 hr {
