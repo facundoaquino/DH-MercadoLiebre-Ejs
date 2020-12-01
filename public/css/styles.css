@@ -51,10 +51,11 @@ body {
 
 .header__btncontainer {
 	text-align: center;
+	 
 }
 .header-menu {
-	width: 20px;
-	height: 20px;
+	width: 40px;
+	height: 40px;
 	background-color: #0044aa;
 	color: white;
 	font-size: 20px;
