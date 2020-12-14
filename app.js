@@ -12,7 +12,7 @@ const routerProducts = require('./routes/products')
 
 /*---------------------- SET PORT DEFAULT BY SERVER OR SET 3000 LIKE LOCAL ---------------------*/
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3030
 
 /*---------------------- SET A VIEW ENGINE EJS ---------------------*/
 
