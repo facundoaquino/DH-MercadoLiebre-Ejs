@@ -1,0 +1,49 @@
+<%-include ('partials/head') %> 
+<%-include ('partials/header') %> 
+
+
+		<main class="registrerMain">
+			<form action="index.html" class="registrer" method="GET">
+				<!-- <label for="nameLastname">Nombre y Apellido</label> -->
+				<input class="registrer__input"  id="nameLastname" type="text" name="nameLast" placeholder="Nombre y Apellido" />
+				<!-- <label for="userName">Nombre de usuario</label> -->
+				<input class="registrer__input"   id="userName" type="text" name="user" placeholder="Nombre de usuario" />
+				<!-- <label for="email">E-mail</label> -->
+				<input class="registrer__input"   type="email" name="email" id="email" placeholder="E-mail"/>
+				<div><label for="date">Fecha de Nacimiento</label></div>
+				<input class="registrer__input"   type="date" name="date" id="email"  />
+				<!-- <label for="adress">Direccion</label> -->
+				<input placeholder="Domicilio" class="registrer__input"  type="text" name="adress" id="adress" />
+				<!-- --------------------- -->
+				<h3>Perfil del usuario</h3>
+
+				<div class="registrerMain__container">
+					<div class="registrerMain__container--user" ><input    type="radio" value="buyer" name="userProfile" id="userProfile" /><label>Comprador</label></div>
+				<div class="registrerMain__container--user">	<input    type="radio" value="seller" name="userProfile" id="userProfile" /><label>Vendedor</labe></div>
+				</div>
+				<!-- ------------------- -->
+				<h3>Intereses</h3>
+
+				<section class="userPreferences">
+					<div><input    type="checkbox" value="electro" name="preferences" id="" /><label>Electro</label></div>
+					<div><input    type="checkbox" value="moda" name="preferences" id="" /><label>Moda</label></div>
+					<div><input    type="checkbox" value="hogar" name="preferences" id="" /><label>Hogar</label></div>
+					<div><input    type="checkbox" value="jugueteria" name="preferences" id="" /><label>Jugueteria</label></div>
+					<div><input    type="checkbox" value="vidasana" name="preferences" id="" /><label>Vida Sana</label></div>
+				</section>
+
+				<!--  -->
+				<h3>Intereses</h3>
+
+				<input class="registrer__input"   type="file" name="userPhoto" id="userPhoto" />
+
+				<input class="registrer__input"   type="password" name="password" placeholder="Elegi tu contraseña" />
+				<input class="registrer__input"   type="password" name="password" placeholder="Repeti tu contraseña" />
+
+				<button class="registrer__submit"  type="submit">Enviar</button>
+				<button class="registrer__clear" type="reset">Borrar</button>
+			</form>
+		</main>
+
+	<!-- PIE DE PAGINA -->
+	<%-include ('partials/footer') %>

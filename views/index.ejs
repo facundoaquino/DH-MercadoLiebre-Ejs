@@ -1,0 +1,20 @@
+<%-include ('partials/head') %> <%-include ('partials/header') %>
+<section class="banner">
+	<img src="images/img-home-banner.jpg" alt="Cobra con todas las tarjetas" />
+</section>
+
+<!-- PRODUCTOS -->
+
+<h2 class="main__title">Basado en tu ultima visita</h2>
+<main class="main">
+	<section class="lastvisited">
+		<% productsSale.forEach(product=> { %> <%-include ('partials/product',{product}) %> <%}) %>
+
+		<h2 class="main__title">Ofertas</h2>
+
+		<% productsVisited.forEach(product => { %> <%-include ('partials/product',{product}) %> <% }) %>
+	</section>
+</main>
+
+<!-- PIE DE PAGINA -->
+<%-include ('partials/footer') %>

@@ -1,0 +1,38 @@
+<%-include ('partials/head') %> <%-include ('partials/header') %>
+
+<h2 class="main__title"><%= product.name %></h2>
+<article class="main__containerProduct-pageProduct">
+	<div class="productPage__img">
+		<img src="/products/<%=product.image%>" alt="cafetera moulinex" />
+
+		<p class="productPage__description"><%= product.description %></p>
+	</div>
+
+	<div class="main__containerProduct-page">
+		<% if(product.discount) {%>
+
+		<div class="productPage__prices">
+			<p class="productPage__price productPage__price--tach">$<%= product.price %></p>
+			<span>/</span>
+			<p class="productPage__price productPage__price--per"><%=product.discount %> % off</p>
+		</div>
+
+		<h3 class="productPage__priceTotal">$ <%= priceDiscount %></h3>
+
+		<% }else {%>
+
+		<h3 class="productPage__priceTotal">$ <%= priceDiscount %></h3>
+
+		<% } %>
+
+		<p class="productPage__benefics">
+			<i class="productPage__icon fas fa-credit-card"></i>Paga en 12 cuotas sin interes
+		</p>
+		<p class="productPage__benefics">
+			<i class="productPage__icon fas fa-store"></i>Retiros gratis en locales del vendedor
+		</p>
+
+		<button class="productPage__buyButton">Comprar ahora</button>
+	</div>
+</article>
+<%-include ('partials/footer') %>

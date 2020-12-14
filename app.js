@@ -1,51 +1,37 @@
 const express = require('express')
 const app = express()
-const bodyParser =require('body-parser') 
+const path = require('path')
 
+/*---------------------- REQUIRED ROUTES ---------------------*/
+const routerMain = require('./routes/main')
 
-app.use(express.static('public'));
-app.use(express.static('views'));
+const routerLogin = require('./routes/login')
 
-/*---------------------- probando express para llenar el body request ---------------------*/
+const routerRegister = require('./routes/register')
+const routerProducts = require('./routes/products')
 
-// app.use(express.json())
-// app.use(express.urlencoded({extended:true}))
+/*---------------------- SET PORT DEFAULT BY SERVER OR SET 3000 LIKE LOCAL ---------------------*/
 
-// app.use(bodyParser.json())
-// app.use(bodyParser.urlencoded({extended:true}))
+const port = process.env.PORT || 3000
 
+/*---------------------- SET A VIEW ENGINE EJS ---------------------*/
 
-app.get('/', (req,res)=>{
-     
-    res.sendFile( __dirname + '/views/index.html')
+app.set('view engine', 'ejs')
 
+/*---------------------- SET PUBLIC FILES ---------------------*/
+
+app.use(express.static(path.join(__dirname, '/public')))
+
+/*---------------------- ROUTES ---------------------*/
+
+app.use('/', routerMain)
+
+app.use('/login', routerLogin)
+
+app.use('/register', routerRegister)
+
+app.use('/product', routerProducts)
+
+app.listen(port, () => {
+	console.log('Servidor MercadoLiebre en puerto ' + port)
 })
-
-// app.post('/registrer',(req,res)=>{
-//     console.log(req.body)
-//     res.sendFile( __dirname + '/views/index.html')
-// })
-
-// app.get('*', function (req, res) {
-//     res.sendFile(__dirname + '/public/' + req.url)
-// })
- 
-app.get('/newsletter', (req,res)=>{
-     
-    res.sendFile( __dirname + '/views/newsletter.html')
-
-})
-app.get('/registrer', (req,res)=>{
-     
-    res.sendFile( __dirname + '/views/registrer.html')
-
-})
-
-app.get('/login', (req,res)=>{
-     
-    res.sendFile( __dirname + '/views/login.html')
-
-})
-
-  
-app.listen(3050)
