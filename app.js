@@ -34,6 +34,12 @@ app.use('/register', routerRegister)
 
 app.use('/product', routerProducts)
 
+/*---------------------- newsletter ---------------------*/
+
+app.get('/newsletter', (req, res) => {
+	res.sendFile(__dirname + '/views/newsletter.html')
+})
+
 app.listen(port, () => {
 	console.log('Servidor MercadoLiebre en puerto ' + port)
 })
