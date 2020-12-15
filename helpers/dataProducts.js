@@ -1,3 +1,5 @@
+/*---------------------- helper function ---------------------*/
+
 const fs = require('fs')
 const toThousand = require('./toThousand')
 
