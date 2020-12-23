@@ -60,18 +60,23 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res, next) => {
-		const { name, price, discount, description, category } = req.body
-		products.forEach((product) => {
-			if (product.id == req.params.id) {
-				// product = { ...product, ...req.body, image: req.files[0].filename }
-				product.name = name
-				product.price = price
-				product.discount = Number(product.discount)
-				product.image = req.files[0].filename
-				product.category = category
-				product.description = description
-			}
-		})
+		const keys = Object.keys(req.body)
+		const product = products.find((product) => product.id == req.params.id)
+		keys.forEach((key) => (product[key] = req.body[key]))
+		product.image = req.files[0].filename
+
+		// const { name, price, discount, description, category } = req.body
+		// products.forEach((product) => {
+		// 	if (product.id == req.params.id) {
+		// 		// product = {  ...req.body, image: req.files[0].filename }
+		// 		product.name = name
+		// 		product.price = price
+		// 		product.discount = Number(discount)
+		// 		product.image = req.files[0].filename
+		// 		product.category = category
+		// 		product.description = description
+		// 	}
+		// })
 
 		const productJson = JSON.stringify(products)
 		fs.writeFileSync(productsFilePath, productJson)
